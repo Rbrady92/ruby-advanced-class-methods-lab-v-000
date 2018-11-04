@@ -28,8 +28,8 @@ class Song
 
   def self.create_by_name(name)  #getting undefined method 'name' when test tries to compare with .name which means reader/accessor not working???
     new_song = Song.new
-    @@all << new_song
     new_song.name = name
+    @@all << new_song
     new_song
   end                            #this method also seems to be working with find_by_name, as changing it makes find fail
 
