@@ -43,7 +43,7 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    self.find_by_name(name) ? self.find_by_name(name) : self.new_by_name(name)
+    self.find_by_name(name) ? self.find_by_name(name) : self.create_by_name(name)
   end
 
   def self.new_from_filename(name)
