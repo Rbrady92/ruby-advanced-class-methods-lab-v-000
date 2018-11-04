@@ -46,8 +46,12 @@ class Song
     self.find_by_name(name) ? self.find_by_name(name) : self.create_by_name(name)
   end
 
-  def self.new_from_filename(name)
-
+  def self.new_from_filename(file)
+    file = file.split(" - ")
+    file[1].delete! ".mp3"
+    song = Song.new
+    song.name = file[1]
+    song.artist_name = file[0]
   end
 
   def self.create_from_filename(name)
