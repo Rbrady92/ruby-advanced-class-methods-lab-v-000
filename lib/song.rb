@@ -26,12 +26,12 @@ class Song
     new_song
   end
 
-  def self.create_by_name(name)  #getting undefined method 'name' when test tries to compare with .name which means reader/accessor not working???
+  def self.create_by_name(name)  
     new_song = Song.new
     new_song.name = name
     @@all << new_song
     new_song
-  end                            #this method also seems to be working with find_by_name, as changing it makes find fail
+  end                           
 
   def self.find_by_name(name)
     @@all.each do |song|
