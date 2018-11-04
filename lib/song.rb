@@ -55,7 +55,7 @@ class Song
     new_song
   end
 
-  def self.create_from_filename(name)
+  def self.create_from_filename(file)
     file = file.split(" - ")
     file[1] = file[1].slice(0..-5)
     new_song = Song.new
