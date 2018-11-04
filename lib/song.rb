@@ -34,7 +34,7 @@ class Song
   end                            #this method also seems to be working with find_by_name, as changing it makes find fail
 
   def self.find_by_name(name)
-    @@all.find do |song|
+    @@all.each do |song|
       if song.name == name
         return song.name
       end
