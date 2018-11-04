@@ -30,6 +30,7 @@ class Song
     new_song = Song.new
     @@all << new_song
     new_song.name = name
+    new_song
   end                            #this method also seems to be working with find_by_name, as changing it makes find fail
 
   def self.find_by_name(name)
