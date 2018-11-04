@@ -26,12 +26,12 @@ class Song
     new_song
   end
 
-  def self.create_by_name(name)  
+  def self.create_by_name(name)
     new_song = Song.new
     new_song.name = name
     @@all << new_song
     new_song
-  end                           
+  end
 
   def self.find_by_name(name)
     @@all.each do |song|
