@@ -39,6 +39,7 @@ class Song
         return song.name
       end
     end
+    false
   end
 
   def self.new_from_filename(name)
